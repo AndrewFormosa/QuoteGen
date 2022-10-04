@@ -1,55 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-//import App from './App';
+//import './index.css';
 import reportWebVitals from './reportWebVitals';
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        {/* TODO */}
-      </button>
-    );
+
+let count=0;
+let start=Date.now();
+
+
+
+
+class MyApp extends React.Component {
+
+ componentDidMount() {
+  this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
   }
+  componentWillUnmount() {
+  clearInterval(this.interval);
 }
 
-class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
-
   render() {
-    const status = 'Next player: X';
 
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
-  }
-}
-
-class Game extends React.Component {
-  render() {
+    count++;
     return (
       <div className="game">
         <div className="game-board">
-          <Board />
+       <h1>This is my app{count}</h1>
         </div>
         <div className="game-info">
           <div>{/* status */}</div>
@@ -63,7 +38,7 @@ class Game extends React.Component {
 // ========================================
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Game />);
+root.render(<MyApp />);
 
 
 
