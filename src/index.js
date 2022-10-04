@@ -6,25 +6,39 @@ import reportWebVitals from './reportWebVitals';
 let count=0;
 let start=Date.now();
 
-
-
-
-class MyApp extends React.Component {
-
- componentDidMount() {
+class Counter extends React.Component {
+ 
+componentDidMount() {
   this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
   }
   componentWillUnmount() {
   clearInterval(this.interval);
 }
 
+ render(){
+    count++;
+  return (
+    
+      <h1>{count}</h1>
+
+    );}
+  
+}
+
+class MyApp extends React.Component {
+
+ 
+
   render() {
 
     count++;
     return (
-      <div className="game">
+        
+      <div className="game"> 
         <div className="game-board">
-       <h1>This is my app{count}</h1>
+       <h1>This is my app <Counter/>{count}</h1>
+
+      <helllo/>
         </div>
         <div className="game-info">
           <div>{/* status */}</div>
