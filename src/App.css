@@ -1,4 +1,7 @@
 .App {
+display:flexbox;
 font-size: 2em;
 text-align: center;
+background-color: rgb(193, 181, 205);
+color: rgb(9, 33, 84);
 }

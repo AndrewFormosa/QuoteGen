@@ -32,8 +32,8 @@ class App extends React.Component {
   render() {
   console.log(this.props.count); 
     return (
-      
-      <div className="game"> 
+      <div class="container-fluid">
+      <div className="App"> 
         <div className="game-board">
           <Score score={this.state.counter}/>
        <h1>This is my app using state: {this.state.counter}</h1>
@@ -45,6 +45,7 @@ class App extends React.Component {
           <div>{/* status */}</div>
           <ol>{/* TODO */}</ol>
         </div>
+      </div>
       </div>
     );
   }
