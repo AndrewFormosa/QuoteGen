@@ -94,7 +94,7 @@ class MyApp extends React.Component {
         <div class="animate">
           <QuoteDisplayer />
         </div>
-        <div class="text-center footer">Random Quote Generator Project by Andrew Formosa</div>
+        <div class="text-center footer">freeCodeCamp Random Quote Generator Project by Andrew Formosa</div>
       </div>
     );
   }
