@@ -6,37 +6,38 @@ h1{
     margin:5vw!important;
     color:rgb(216, 216, 216);
     text-align: center;
-    font-size: 6vw!important;
+    font-size: 5vh!important;
 }
 
 p{
-    font-size: 3vw!important;
+    font-size: 4vh!important;
 }
-figcaption, button, a{
-    font-size: 2vw!important;
+figcaption, button{
+    font-size: 3vh!important;
 }
 
 
 .text-end{
-    margin: 5vw 2vw 2vw 2vw!important;
+    margin: 5vh 5vh 5vh 2vh!important;
 }
 
 .footer{
-    margin: 2vw;
-    font-size: 2vw!important;
+    margin: 3vh;
+    font-size: 2vh!important;
     color:lightgrey;
 }
 
 p {
 display:flexbox;
 font-size: 2em;
+
 text-align: center;
 color:$font-mainColor;
 }
 
 #quote-box{
     border-radius: 10vw;
-    width:80%;
+    width:90%;
     margin: auto;
     color: $font-mainColor;
     background:$quote-box-backColor;
