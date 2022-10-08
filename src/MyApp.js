@@ -38,7 +38,7 @@ class QuoteDisplayer extends React.Component {
     let quoteauthor = this.state.AllQuotes[this.state.QuoteNumber].author;
     let twitterHref = "https://twitter.com/intent/tweet?text=" + quotetext + " -" + quoteauthor;
     return (
-      <div id="quote-box" class="card shadow fade-out">
+      <div id="quote-box" class="card shadow fade-out text-center">
         <figure class="text-end">
           <div>
             <blockquote class="blockquote">
