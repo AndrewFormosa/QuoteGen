@@ -1,0 +1,30 @@
+$font-mainColor:rgb(133, 144, 175);
+$quote-box-backColor:rgb(53, 53, 159);
+
+
+p {
+display:flexbox;
+font-size: 2em;
+text-align: center;
+color:$font-mainColor;
+}
+
+#quote-box{
+    border-radius: 50px;
+    width:50%;
+    margin: auto;
+    color: $font-mainColor;
+    background:$quote-box-backColor;
+}
+
+.btn-outline-light{
+    color:$font-mainColor!important;
+    background-color: $quote-box-backColor!important;
+    border-color:$font-mainColor!important; /*set the color you want here*/
+}
+
+.btn-outline-light:hover{
+    color:white!important;
+    background-color: $quote-box-backColor!important;
+    border-color: #ffffff!important; /*set the color you want here*/
+}

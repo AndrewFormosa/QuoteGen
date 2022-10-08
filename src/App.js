@@ -1,6 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery'
 
 class Score extends React.Component{
   constructor(props){
@@ -12,15 +14,21 @@ render(){
 
 }
 
-
-
 class App extends React.Component {
   constructor(props){
     super(props);
       this.state={counter:this.props.initialValue, step:this.props.incre}
   }
 
+  jQuerycode() {
+    $(".mybutton").click(function () {
+      $('.mybutton').css('color', 'red');
+    });
+  }
 
+  componentDidMount(){
+    this.jQuerycode();
+  }
 
   increment=()=>{
     this.setState({counter:this.state.counter+=this.state.step});
@@ -31,15 +39,21 @@ class App extends React.Component {
 
   render() {
   console.log(this.props.count); 
+
+
+
     return (
+
+
       <div class="container-fluid">
-      <div className="App"> 
+        <button class="btn btn-primary">button</button>
+      <div class="App"> 
         <div className="game-board">
           <Score score={this.state.counter}/>
        <h1>This is my app using state: {this.state.counter}</h1>
        <button onClick={this.increment}>Please Click</button>
        <h1>This is my app using props: {this.props.initialValue}</h1>
-       <button onClick={this.inc}>Please Click</button>
+       <button class="mybutton"  onClick={this.inc}>Please Click</button>
         </div>
         <div className="game-info">
           <div>{/* status */}</div>

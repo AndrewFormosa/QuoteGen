@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import {App} from './App';
-//import MyApp from './App';
+import './index.scss';
+import {MyApp} from './MyApp';
 import reportWebVitals from './reportWebVitals';
 
 
 // ========================================
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App initialValue={5} incre={2}/>);
+root.render(<MyApp/>);
 
