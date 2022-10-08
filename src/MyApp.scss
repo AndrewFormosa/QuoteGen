@@ -1,6 +1,31 @@
 $font-mainColor:rgb(133, 144, 175);
 $quote-box-backColor:rgb(53, 53, 159);
+$bgColor:rgb(99, 135, 173);
 
+h1{
+    margin:5vw!important;
+    color:rgb(216, 216, 216);
+    text-align: center;
+    font-size: 6vw!important;
+}
+
+p{
+    font-size: 3vw!important;
+}
+figcaption, button, a{
+    font-size: 2vw!important;
+}
+
+
+.text-end{
+    margin: 5vw 2vw 2vw 2vw!important;
+}
+
+.footer{
+    margin: 2vw;
+    font-size: 2vw!important;
+    color:lightgrey;
+}
 
 p {
 display:flexbox;
@@ -10,8 +35,8 @@ color:$font-mainColor;
 }
 
 #quote-box{
-    border-radius: 50px;
-    width:50%;
+    border-radius: 10vw;
+    width:80%;
     margin: auto;
     color: $font-mainColor;
     background:$quote-box-backColor;
@@ -27,4 +52,9 @@ color:$font-mainColor;
     color:white!important;
     background-color: $quote-box-backColor!important;
     border-color: #ffffff!important; /*set the color you want here*/
+}
+
+:export {
+    bgColor: $bgColor;
+
 }
